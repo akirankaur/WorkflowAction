@@ -1,0 +1,20 @@
+name: Starter Workflow Demo
+
+on:
+  push:
+    branches: 
+      - $default-branch
+  pull_request:
+    branches: 
+      - $default-branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Demo workflow job
+        run: echo "This is a demo start workflow"
